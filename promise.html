@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        async function one(){
+            var name1 = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(" Madiha!!");
+                },2000);
+            })
+            
+            var name2 = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(" Warisha!!");
+                },4000);
+            })
+           
+            var name3 = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve("Ali!!");
+                },6000);
+            })
+            
+            var name4 = new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve(" Saif!!");
+                },8000);
+            })
+
+            let nam1 = await name1;
+            console.log("Waiting for the first user...");
+            console.log(`The fist user is ${nam1}`);
+
+            let nam2 = await name2;
+            console.log("Waiting for the second user...");
+            console.log(`The second user is ${nam2}`);
+
+            let nam3 = await name3;
+            console.log("Waiting for the third user...");
+            console.log(`The third user is ${nam3}`);
+
+            let nam4 = await name4;
+            console.log("Waiting for the forth user...");
+            console.log(`The forth user is ${nam4}`);
+        }
+
+        let fullfill = ((value)=>{
+            console.log(value);
+        });
+        one().then((value)=>{
+            console.log(value);
+        });
+
+    </script>
+</body>
+</html>
